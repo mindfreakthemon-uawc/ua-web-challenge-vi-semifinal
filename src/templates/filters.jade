@@ -1,0 +1,11 @@
+h3 Equalizer
+table.table-responsive
+	thead
+		tr
+			each key in frequencies
+				th= formatter(key)
+	tbody
+		tr
+			each key in frequencies
+				td
+					input(type='range', data-key=key, max=30, min=-30, step=1, value=0)

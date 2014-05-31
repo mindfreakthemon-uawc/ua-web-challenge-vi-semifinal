@@ -1,0 +1,37 @@
+doctype html
+html
+	head
+		title Main page
+
+		link(rel='stylesheet', href='lib/bootstrap/css/bootstrap.min.css')
+		link(rel='stylesheet', href='css/index.css')
+
+		script(src='lib/require.js', data-main='js/main.js')
+body
+	.container
+		.tests
+			a(href='tests.html') QUnit Tests
+
+		form.container-fluid#upload
+			.row
+				.col-md-12
+					h4 Choose .mp3 / .ogg
+					.form-group
+						input.form-control(type='file', id='file', accept='.mp3,.ogg')
+
+		#scene.hidden
+			.row
+				.col-md-1
+					.form-group
+						button.btn#toggle(type='button') Play/pause
+				.col-md-1
+					.form-group
+						button.btn#unload(type='button') Unload
+				.col-md-1
+					.form-group
+						label Volume
+							input#volume(type='range', value=1, min=0, max=1, step='0.01')
+			#visualizer
+			#equalizer
+
+
